@@ -160,7 +160,6 @@ const Footer = () => {
       </div>
       
       <div className="footer-bottom">
-        <p style={{fontWeight:600, color:'white', fontSize:'1.08em', marginBottom:'0.2em'}}>Created by AWS Cloud Club – St. Joseph’s Institute of Technology</p>
         <p>Built with AWS</p>
         <p className="footer-credits">&copy; {new Date().getFullYear()} Nephele Team. All rights reserved.</p>
       </div>
