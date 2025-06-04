@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import './Videos.css';
 import nepheleVideo from '../assets/nephele_2.0_video.mp4';
-import nephelePoster from '../assets/nephele_2.0.jpeg';
+import nephelePoster from '../assets/nephele_2.0 -video-image.jpeg';
 
 const Videos = () => {
   const [isVisible, setIsVisible] = useState(false);
