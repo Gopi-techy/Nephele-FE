@@ -124,7 +124,7 @@ const featuresData = [
   {
     icon: '🧠',
     title: 'Face Recognition of Previously Visited Members',
-    desc: 'Identifies and recognizes users who have interacted with Nephele earlier.',
+    desc: 'Identifies and recognizes users who have interacted with Aurora earlier.',
     detail: 'Uses the Pi Camera to capture the user\'s face. A machine learning model running on Coral TPU processes the face data and matches it with records stored in DynamoDB. Delivers a personalized greeting and experience, making users feel remembered and valued.'
   },
   {
@@ -162,7 +162,7 @@ const featuresData = [
     icon: '🌍',
     title: 'Language Translation',
     desc: 'Translates text or voice to multiple languages.',
-    detail: 'Captures spoken input. Converts it to text using Amazon Transcribe. Translates using LLMs or translation APIs. Converts back to speech using Amazon Polly. Makes Nephele inclusive and accessible to multilingual audiences.'
+    detail: 'Captures spoken input. Converts it to text using Amazon Transcribe. Translates using LLMs or translation APIs. Converts back to speech using Amazon Polly. Makes Aurora inclusive and accessible to multilingual audiences.'
   },
 ];
 
@@ -212,7 +212,7 @@ const Features = () => {
         textShadow: '0 2px 12px #e3f0ff',
       }}>Features</h2>
       <div style={{fontSize:'1.18rem', color:'#4a5a7a', marginBottom:'2.5rem', zIndex:2, position:'relative', fontWeight:500}}>
-        Follow Nephele's journey and see how each feature builds on the last to create a seamless experience.
+        Follow Aurora's journey and see how each feature builds on the last to create a seamless experience.
       </div>
       <div style={{
         ...diagonalRoadmapContainer,

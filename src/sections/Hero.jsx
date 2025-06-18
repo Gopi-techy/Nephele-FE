@@ -116,7 +116,7 @@ const Hero = () => {
       <div style={gradientOverlayStyle}></div>
       <div style={currentHeroContentStyle}>
         <h1 style={heroTitleStyle}>
-          Meet <span style={highlightTextStyle}>Nephele</span> – Your AI Interview Assistant
+          Meet <span style={highlightTextStyle}>Aurora</span> – Your AI Interview Assistant
         </h1>
         <p style={heroSubtitleStyle}>
           From resume analysis to real-time mock interviews, powered by cutting-edge AWS technology and GenAI innovation.

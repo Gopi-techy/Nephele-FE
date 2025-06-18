@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import './Videos.css';
-import nepheleVideo from '../assets/nephele_2.0_video.mp4';
-import nephelePoster from '../assets/nephele_2.0 -video-image.jpeg';
+import auroraVideo from '../assets/nephele_2.0_video.mp4';
+import auroraPoster from '../assets/nephele_2.0 -video-image.jpeg';
 
 const Videos = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -45,7 +45,7 @@ const Videos = () => {
           WebkitTextFillColor: 'transparent',
           backgroundClip: 'text',
         }}>
-          Nephele in Action
+          Aurora in Action
         </div>
         <div className="videos-animated-sub" style={{
           fontSize: '1.25rem',
@@ -131,14 +131,14 @@ const Videos = () => {
             borderTopLeftRadius: '2.5rem',
             borderTopRightRadius: '0.5rem',
           }}>
-            <video className="video-iframe" src={nepheleVideo} controls style={{
+            <video className="video-iframe" src={auroraVideo} controls style={{
               width: '100%',
               height: '100%',
               borderRadius: '2rem 0.5rem 0 0',
               background: '#e3f0ff',
               objectFit: 'cover',
               boxShadow: '0 8px 32px #0078d41a',
-            }} poster={nephelePoster} />
+            }} poster={auroraPoster} />
             <div style={{
               position: 'absolute',
               top: 0, left: 0, right: 0, bottom: 0,
@@ -177,7 +177,7 @@ const Videos = () => {
           color: 'var(--video-text-dark)',
           letterSpacing: '0.01em',
         }}>
-          Nephele 2.0 Demo
+          Aurora Demo
         </div>
         <div className="video-description" style={{
           color: 'var(--video-text-light)',
@@ -185,7 +185,7 @@ const Videos = () => {
           lineHeight: 1.7,
           maxWidth: 700,
         }}>
-          See how Nephele, the AI-powered interview assistant robot, works in real time. Experience the seamless feedback, resume analysis, and smart coaching features in this exclusive demo.
+          See how Aurora, the AI-powered interview assistant robot, works in real time. Experience the seamless feedback, resume analysis, and smart coaching features in this exclusive demo.
         </div>
       </div>
     </section>

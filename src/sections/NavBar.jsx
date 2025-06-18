@@ -101,7 +101,7 @@ const NavBar = () => {
   // Navigation links
   const navLinks = [
     { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About Nephele' },
+    { id: 'about', label: 'About Aurora' },
     { id: 'features', label: 'Features' },
     { id: 'videos', label: 'Videos' }
   ];
@@ -118,7 +118,7 @@ const NavBar = () => {
             }
           }}>
             <img src={RoboTop} alt="Robo-top" className="logo-robo" />
-            Neph<span className="logo-highlight">ele</span>
+            <span className="logo-highlight">Aur</span>ora
             <div className="logo-particles">
               {particles.map(particle => (
                 <div

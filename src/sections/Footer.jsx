@@ -51,24 +51,13 @@ const Footer = () => {
         {/* Company info column */}
         <div className="footer-column">
           <span className="footer-logo">
-            Neph<span className="footer-logo-highlight">ele</span>
+            <span className="footer-logo-highlight">Aur</span>ora
           </span>
           <p className="footer-about">
-            Nephele is an AI-powered interview assistant that helps candidates prepare with real-time feedback, resume analysis, and personalized coaching.
+            Aurora is an AI-powered interview assistant that helps candidates prepare with real-time feedback, resume analysis, and personalized coaching.
           </p>
           <div className="footer-social">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-link">
-              G
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-link">
-              L
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-link">
-              T
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-link">
-              I
-            </a>
+            {/* Social links removed as requested */}
           </div>
         </div>
         
@@ -83,7 +72,7 @@ const Footer = () => {
             </li>
             <li className="footer-link-item">
               <a href="#about" className="footer-link">
-                <span className="footer-link-icon">→</span> About Nephele
+                <span className="footer-link-icon">→</span> About Aurora
               </a>
             </li>
             <li className="footer-link-item">
@@ -135,7 +124,7 @@ const Footer = () => {
         <div className="footer-column">
           <h3 className="footer-links-title">Stay Updated</h3>
           <p className="footer-about">
-            Subscribe to our newsletter for the latest updates on Nephele's features and improvements.
+            Subscribe to our newsletter for the latest updates on Aurora's features and improvements.
           </p>
           {submitted ? (
             <p className="footer-about" style={{ color: 'var(--footer-link)' }}>
@@ -161,7 +150,7 @@ const Footer = () => {
       
       <div className="footer-bottom">
         <p>Built with AWS</p>
-        <p className="footer-credits">&copy; {new Date().getFullYear()} Nephele Team. All rights reserved.</p>
+        <p className="footer-credits">&copy; {new Date().getFullYear()} Aurora Team. All rights reserved.</p>
       </div>
       
       {/* Back to top button */}

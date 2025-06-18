@@ -48,7 +48,7 @@ const MockInterview = () => {
         margin: '0 auto',
       }}>
         <div style={{ flex: 1, minWidth: 300, textAlign: 'right', fontSize: '1.2rem', color: '#4a5a7a', fontWeight: 500 }}>
-          Welcome to the Mock Interview page! Here you can practice and prepare for your interviews with Nephele.
+          Welcome to the Mock Interview page! Here you can practice and prepare for your interviews with Aurora.
         </div>
         <div style={{ flex: 1, minWidth: 300, textAlign: 'left', fontSize: '1.2rem', color: '#4a5a7a', fontWeight: 500 }}>
           <span style={{ color: '#C51A4A', fontWeight: 600 }}>Upload your resume below to get personalized feedback and AI-powered analysis.</span>

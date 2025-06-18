@@ -1,13 +1,13 @@
-# Nephele Product Webpage
+# Aurora Product Webpage
 
-This is a React-based product webpage for Nephele, an AI-powered interview assistant robot. The site features a modern, responsive design with a sticky navigation bar, hero section, about, features roadmap, video showcase, and footer. The project is built with Vite and prepared for AWS Amplify and S3 integration.
+This is a React-based product webpage for Aurora, an AI-powered interview assistant robot. The site features a modern, responsive design with a sticky navigation bar, hero section, about, features roadmap, video showcase, and footer. The project is built with Vite and prepared for AWS Amplify and S3 integration.
 
 ## Features
 
 - **Sticky Navigation Bar**: Always accessible at the top for smooth navigation.
-- **Hero Section**: Eye-catching introduction to Nephele.
-- **About Section**: Learn more about Nephele's mission and technology.
-- **Features Roadmap**: Visually striking, animated stepper/roadmap layout showing Nephele's capabilities.
+- **Hero Section**: Eye-catching introduction to Aurora.
+- **About Section**: Learn more about Aurora's mission and technology.
+- **Features Roadmap**: Visually striking, animated stepper/roadmap layout showing Aurora's capabilities.
 - **Video Showcase**: Demo video with animated title and floating effects.
 - **Footer**: Contact and copyright information.
 - **Responsive Design**: Works beautifully on all devices.
@@ -81,4 +81,4 @@ MIT
 
 ---
 
-**Nephele** — The future of interview preparation, powered by AI.
+**Aurora** — The future of interview preparation, powered by AI.

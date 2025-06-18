@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import nepheleImg1 from '../assets/Hardware-plannings.jpg';
-import nepheleImg2 from '../assets/Hardware-plannings.jpg';
-import nepheleImg3 from '../assets/Hardware-plannings.jpg';
+import auroraImg1 from '../assets/Hardware-plannings.jpg';
+import auroraImg2 from '../assets/Hardware-plannings.jpg';
+import auroraImg3 from '../assets/Hardware-plannings.jpg';
 // import nepheleImg2 from '../assets/nephele_2.0 - Copy.jpeg';
 // import nepheleImg3 from '../assets/nephele_2.0 - Copy (2).jpeg';
 
@@ -201,9 +201,9 @@ const About = () => {
 
   // For future: add more images to this array
   const images = [
-    nepheleImg1,
-    nepheleImg2,
-    nepheleImg3
+    auroraImg1,
+    auroraImg2,
+    auroraImg3
   ];
 
   // Infinite scroll logic: duplicate images for seamless loop
@@ -228,14 +228,14 @@ const About = () => {
       }}></div>
       <div style={currentAboutContentStyle}>
         <h2 style={aboutHeadingStyle}>
-          About <span style={aboutHighlightStyle}>Nephele</span>
+          About <span style={aboutHighlightStyle}>Aurora</span>
         </h2>
         <p style={aboutTextStyle}>
-          Nephele is an AI-powered interview assistant robot designed to revolutionize how 
+          Aurora is an AI-powered interview assistant robot designed to revolutionize how 
           candidates prepare for interviews with real-time feedback, comprehensive resume analysis,
           and personalized coaching. Built by a passionate team using cutting-edge technologies 
-          including Raspberry Pi, AWS services, React, and advanced LLMs, Nephele is constantly evolving—look 
-          out for Nephele 2.0 and the upcoming 3.0 upgrade with even more powerful features!
+          including Raspberry Pi, AWS services, React, and advanced LLMs, Aurora is constantly evolving—look 
+          out for Aurora and the upcoming 3.0 upgrade with even more powerful features!
         </p>
         <ul style={techListStyle}>
           {technologies.map((tech) => (
@@ -259,7 +259,7 @@ const About = () => {
             <img
               key={idx}
               src={img}
-              alt="Nephele robot"
+              alt="Aurora robot"
               style={currentAboutImageStyle}
             />
           ))}
