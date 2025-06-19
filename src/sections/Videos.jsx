@@ -1,10 +1,20 @@
 import React, { useRef, useEffect, useState } from 'react';
 import './Videos.css';
-import auroraVideo from '../assets/nephele_2.0_video.mp4';
-import auroraPoster from '../assets/nephele_2.0 -video-image.jpeg';
+import auroraV1 from '../assets/aurora-v1.mp4';
+import auroraV2 from '../assets/aurora-v2.mp4';
+import auroraV3 from '../assets/aurora-v3.mp4';
+
+const videoList = [
+  { src: auroraV1, title: 'Aurora Demo 1' },
+  { src: auroraV2, title: 'Aurora Demo 2' },
+  { src: auroraV3, title: 'Aurora Demo 3' },
+];
 
 const Videos = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [current, setCurrent] = useState(0);
+  const [direction, setDirection] = useState('');
+  const [showing, setShowing] = useState(true);
   const videoSectionRef = useRef(null);
 
   useEffect(() => {
@@ -18,6 +28,28 @@ const Videos = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handlePrev = () => {
+    setDirection('left');
+    setShowing(false);
+  };
+  const handleNext = () => {
+    setDirection('right');
+    setShowing(false);
+  };
+
+  const handleTransitionEnd = () => {
+    if (!showing) {
+      setCurrent((prev) => {
+        if (direction === 'left') {
+          return prev === 0 ? videoList.length - 1 : prev - 1;
+        } else {
+          return prev === videoList.length - 1 ? 0 : prev + 1;
+        }
+      });
+      setShowing(true);
+    }
+  };
 
   return (
     <section id="videos" className="videos-section" ref={videoSectionRef}>
@@ -131,14 +163,64 @@ const Videos = () => {
             borderTopLeftRadius: '2.5rem',
             borderTopRightRadius: '0.5rem',
           }}>
-            <video className="video-iframe" src={auroraVideo} controls style={{
-              width: '100%',
-              height: '100%',
-              borderRadius: '2rem 0.5rem 0 0',
-              background: '#e3f0ff',
-              objectFit: 'cover',
-              boxShadow: '0 8px 32px #0078d41a',
-            }} poster={auroraPoster} />
+            <button onClick={handlePrev} aria-label="Previous video" style={{
+              position: 'absolute',
+              left: 16,
+              top: '50%',
+              transform: 'translateY(-50%)',
+              zIndex: 3,
+              padding: '0.6rem 1.2rem',
+              borderRadius: '50%',
+              border: 'none',
+              background: 'linear-gradient(90deg, #e3f0ff 0%, #c7e2ff 100%)',
+              color: '#0078d4',
+              fontWeight: 700,
+              fontSize: '1.5rem',
+              cursor: 'pointer',
+              boxShadow: '0 2px 8px #0078d422',
+              transition: 'background 0.2s, color 0.2s',
+              width: 48,
+              height: 48,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>&#8592;</button>
+            <div
+              className={`video-carousel-fade${showing ? '' : ' transitioning ' + direction}`}
+              style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+              onTransitionEnd={handleTransitionEnd}
+            >
+              <video className="video-iframe" src={videoList[current].src} controls style={{
+                width: '100%',
+                height: '100%',
+                borderRadius: '2rem 0.5rem 0 0',
+                background: '#e3f0ff',
+                objectFit: 'cover',
+                boxShadow: '0 8px 32px #0078d41a',
+              }} />
+            </div>
+            <button onClick={handleNext} aria-label="Next video" style={{
+              position: 'absolute',
+              right: 16,
+              top: '50%',
+              transform: 'translateY(-50%)',
+              zIndex: 3,
+              padding: '0.6rem 1.2rem',
+              borderRadius: '50%',
+              border: 'none',
+              background: 'linear-gradient(90deg, #e3f0ff 0%, #c7e2ff 100%)',
+              color: '#0078d4',
+              fontWeight: 700,
+              fontSize: '1.5rem',
+              cursor: 'pointer',
+              boxShadow: '0 2px 8px #0078d422',
+              transition: 'background 0.2s, color 0.2s',
+              width: 48,
+              height: 48,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>&#8594;</button>
             <div style={{
               position: 'absolute',
               top: 0, left: 0, right: 0, bottom: 0,
@@ -147,45 +229,13 @@ const Videos = () => {
               zIndex: 2,
             }} />
           </div>
-          {/* No video-content text here */}
-          <style>{`
-            @keyframes floatShape1 {
-              0% { transform: translateY(0) scale(1); }
-              100% { transform: translateY(18px) scale(1.08); }
-            }
-            @keyframes floatShape2 {
-              0% { transform: translateY(0) scale(1); }
-              100% { transform: translateY(-14px) scale(1.04); }
-            }
-          `}</style>
-        </div>
-      </div>
-      {/* Place the title and description below the video card, outside the box */}
-      <div style={{
-        width: '100%',
-        maxWidth: 900,
-        margin: '2.5rem auto 0 auto',
-        textAlign: 'center',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        gap: '0.7rem',
-      }}>
-        <div className="video-title" style={{
-          fontSize: '1.9rem',
-          fontWeight: 700,
-          color: 'var(--video-text-dark)',
-          letterSpacing: '0.01em',
-        }}>
-          Aurora Demo
-        </div>
-        <div className="video-description" style={{
-          color: 'var(--video-text-light)',
-          fontSize: '1.18rem',
-          lineHeight: 1.7,
-          maxWidth: 700,
-        }}>
-          See how Aurora, the AI-powered interview assistant robot, works in real time. Experience the seamless feedback, resume analysis, and smart coaching features in this exclusive demo.
+          <div className="video-title" style={{
+            fontSize: '1.3rem',
+            fontWeight: 700,
+            color: 'var(--video-text-dark)',
+            letterSpacing: '0.01em',
+            marginTop: '1.2rem',
+          }}>{videoList[current].title}</div>
         </div>
       </div>
     </section>

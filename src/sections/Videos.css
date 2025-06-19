@@ -263,6 +263,23 @@
   animation-delay: 0.5s;
 }
 
+/* Video Carousel Transitions */
+.video-carousel-fade {
+  transition: opacity 0.35s cubic-bezier(.68,-0.55,.27,1.55), transform 0.35s cubic-bezier(.68,-0.55,.27,1.55);
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.video-carousel-fade.transitioning.left {
+  opacity: 0;
+  transform: translateX(-60px) scale(0.98);
+}
+
+.video-carousel-fade.transitioning.right {
+  opacity: 0;
+  transform: translateX(60px) scale(0.98);
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .videos-heading {
